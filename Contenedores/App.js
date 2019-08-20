@@ -7,6 +7,8 @@
  */
 
 import React, {Component} from 'react';
+import { Provider } from "mobx-react";
+import stores from "../Mobx";
 import AppNavigation from "../Navegacion/AppNavigation"
 
 export default class App extends Component
@@ -14,9 +16,9 @@ export default class App extends Component
   render()
   {
     return(
-        //<Provider {...stores}>
+        <Provider {...stores}>
           <AppNavigation/>
-        //</Provider>     
+        </Provider>     
     ); 
   }
 }

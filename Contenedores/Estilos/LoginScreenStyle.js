@@ -1,4 +1,4 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, Platform} from "react-native";
 import {Metricas, Colores, Fuentes} from "../../Temas";
 
 
@@ -29,7 +29,7 @@ export default StyleSheet.create(
       textAlign: "center"
     },
     title: {
-      fontSize: 40,
+      fontSize: 30,
       color: Colores.whiteFull,
       fontWeight: "bold",
       fontFamily: Fuentes.family.bold
@@ -66,5 +66,18 @@ export default StyleSheet.create(
       color: Colores.whiteFull,
       fontSize: 12,
       marginBottom: Metricas.samllSpace
+    },
+    contenedorIcon: {
+      justifyContent: "center",
+      height: 60,
+      alignItems: "center",
+      overflow: "hidden",
+      borderRadius: Metricas.borderRadius,
+      marginBottom: Metricas.baseSpace
+
+    },
+    iconImagen: {
+      width: 170,
+      height: 60
     }
 });

@@ -3,6 +3,9 @@ import {createStackNavigator,
     createBottomTabNavigator
 } from "react-navigation";
 import LoginScreen from "../Contenedores/LoginScreen";
+import DashBoard from "../Contenedores/DashBoard";
+import CrearPerfil from "../Contenedores/CrearPerfil";
+import OlvidoContrasena from "../Contenedores/OlvidoContrasena";
 
 const TabNav = createBottomTabNavigator(
 {
@@ -18,12 +21,16 @@ const TabNav = createBottomTabNavigator(
 );
 const AppNavigator = createStackNavigator(
 {
-    Home: { screen: TabNav}/*,
-    Details: { screen: RecipeDetailScreen },
-    Category: { screen: CategoryScreen}*/
+    Home: { screen: TabNav},
+    inicioSesion: {screen: LoginScreen},
+    dashboard: { screen: DashBoard},
+    crearperfil: {screen: CrearPerfil},
+    olvidocontrasena: {screen: OlvidoContrasena}
+    //Category: { screen: CategoryScreen}
 },
 {
-    headerMode: "none"
+    headerMode: "none",
+    initialRouteName: "inicioSesion"
 }
 );
 
